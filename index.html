@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aishwarya (Arya) Yadama — PhD Candidate, MIT Sloan</title>
+<meta content="Aishwarya (Arya) Yadama is a PhD candidate at MIT Sloan studying how employer and managerial practices shape gender inequality, work hours, and worker outcomes." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #1c1b1a;
+    --ink-soft: #55524e;
+    --paper: #ffffff;
+    --rule: #e4e1dc;
+    --accent: #750014;        /* MIT rosewood */
+    --accent-hover: #9e2b3d;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+    --sidebar-w: 252px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  body {
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  /* ---------- Fixed sidebar ---------- */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    overflow-y: auto;
+    padding: 3rem 1.75rem 2rem 2.25rem;
+    border-right: 1px solid var(--rule);
+  }
+
+  .headshot {
+    width: 148px;
+    height: 148px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: var(--rule);
+    display: block;
+    margin-bottom: 1.1rem;
+  }
+
+  .sidebar h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  .role {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.45rem;
+    line-height: 1.5;
+  }
+
+  .role a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+  .role a:hover { color: var(--accent); }
+
+  .email {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    margin-top: 0.4rem;
+  }
+
+  .profiles {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    margin-top: 0.3rem;
+    color: var(--ink-soft);
+  }
+
+  nav {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  nav a { color: var(--ink); }
+  nav a.subnav { padding-left: 0.9rem; font-weight: 400; color: var(--ink-soft); font-size: 0.82rem; }
+  nav a.cv-link { color: var(--accent); font-weight: 600; }
+
+  /* ---------- Main content ---------- */
+  main {
+    margin-left: var(--sidebar-w);
+    max-width: 46rem;
+    padding: 3.25rem 2.5rem 5rem 3rem;
+  }
+
+  main section:first-child { margin-top: 0; }
+  section { margin-top: 3rem; }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.4rem;
+  }
+
+  .subhead {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    border: none;
+    margin: 2rem 0 1rem;
+  }
+
+  section p + p { margin-top: 1rem; }
+
+  /* ---------- Papers ---------- */
+  .paper { margin-bottom: 1.9rem; }
+  .paper:last-child { margin-bottom: 0; }
+
+  .paper h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .paper h3 a { color: var(--ink); }
+  .paper h3 a:hover { color: var(--accent); }
+
+  .paper .meta {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.25rem;
+  }
+
+  .paper .meta .status { color: var(--accent); font-weight: 500; }
+
+  .paper .links {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .pub { margin-bottom: 1rem; font-size: 0.98rem; }
+  .pub:last-child { margin-bottom: 0; }
+  .pub .venue { font-style: italic; }
+
+  details { margin-top: 0.45rem; }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "+";
+    display: inline-block;
+    width: 0.9em;
+    color: var(--accent);
+    font-weight: 600;
+    transition: transform 0.15s ease;
+  }
+  details[open] summary::before { content: "–"; }
+  summary:hover { color: var(--accent); }
+  summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  details .abstract {
+    margin-top: 0.6rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--rule);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  ul.plain { list-style: none; }
+  ul.plain li { margin-bottom: 0.9rem; }
+  ul.plain li:last-child { margin-bottom: 0; }
+  .li-note {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    display: block;
+    margin-top: 0.1rem;
+  }
+
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Mobile: sidebar stacks on top ---------- */
+  @media (max-width: 800px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--rule);
+      padding: 2.25rem 1.5rem 1.5rem;
+    }
+    .headshot { width: 116px; height: 116px; }
+    nav { flex-direction: row; flex-wrap: wrap; gap: 0.35rem 1.15rem; }
+    nav a.subnav { display: none; }
+    main { margin-left: 0; padding: 2rem 1.5rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<aside class="sidebar">
+<img alt="Portrait of Aishwarya Yadama" class="headshot" onerror="this.style.display='none'" src="assets/headshot.jpeg"/>
+<h1>Aishwarya (Arya) Yadama</h1>
+<p class="role">PhD Candidate, <a href="https://mitsloan.mit.edu/" target="_blank" rel="noopener">MIT Sloan School of Management</a></p>
+<p class="email"><a href="mailto:yadama@mit.edu">yadama@mit.edu</a></p>
+<p class="profiles"><a href="https://www.linkedin.com/in/arya-yadama-8b664b121/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=rfs7M5cAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+<nav aria-label="Site">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a class="subnav" href="#jmp">Job Market Paper</a>
+<a class="subnav" href="#working-papers">Working Papers</a>
+<a class="subnav" href="#publications">Publications</a>
+<a href="#teaching">Teaching</a>
+<a href="#contact">Contact</a>
+<a class="cv-link" href="files/Yadama_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+</nav>
+</aside>
+<main>
+<section id="about">
+<h2>About</h2>
+<p>I am a doctoral candidate at MIT Sloan School of Management, affiliated with the <a href="https://mitsloan.mit.edu/faculty/academic-groups/system-dynamics/about-us" target="_blank" rel="noopener">System Dynamics group</a>. My research examines how organizations and managers within them shape economic mobility and inequality, with a particular focus on low-wage, hourly work. I am additionally interested in identifying practices that organizational leaders can adopt to support worker mobility without compromising firm performance.</p>
+<p>My dissertation examines how frontline managers in warehouse fulfillment centers influence gender inequality in earnings through the hours they allocate to employees. My other projects investigate why gender pay gaps vary across similar workplaces, how strategic initiatives such as DEI practices and education reforms sometimes fail to work as planned, and which employer practices support mobility for non-college and historically marginalized workers.</p>
+<p>I use a variety of research methods to answer these questions but primarily leverage dynamic modeling and simulation along with econometric analysis of large-scale administrative data. Prior to joining MIT, I served as a pre-doctoral research fellow at the <a href="https://cdnm.bwh.harvard.edu/" target="_blank" rel="noopener">Channing Division of Network Medicine</a> at Harvard Medical School. I graduated with a B.S. in Systems Science Engineering from Washington University in St. Louis.</p>
+<p><strong>I am on the 2026–27 academic job market.</strong></p>
+</section>
+<section id="research">
+<h2>Research</h2>
+<p class="subhead" id="jmp">Job Market Paper</p>
+<div class="paper">
+<h3>Managers and the Gender Gap in Hours in Low-Wage Work</h3>
+<details>
+<summary>Abstract</summary>
+<p class="abstract">
+        How do managers shape the gender gap in hours? For low-wage hourly workers, hours are a direct determinant of pay, and yet research on gender inequality in hours has focused on supply-side explanations, such as women’s caregiving constraints. The role of manager’s decisions in the hours that men and women work remains largely unexamined. Frontline managers impact the hours that workers receive because they are often tasked with deploying lean scheduling strategies that attempt to match staffing to fluctuating demand. In this paper, I investigate whether and how managers shape the gender gap in hours, focusing on two managerial characteristics: gender and tenure. I use longitudinal administrative pay data for nearly 9,000 full-time warehouse workers to estimate within-individual models that compare the same worker’s hours across changes in their direct supervisor. This specification allows me to isolate managerial allocation from stable worker preferences. I find that women receive fewer hours than men in the same job, and that this gap is driven primarily by differences in regular hours, or the baseline hours that define full-time work, rather than overtime. Managerial experience substantially shapes this gap. When a woman receives a newly appointed supervisor, her regular hours drop by roughly one hour per week. This effect is concentrated among new male supervisors, who also cut overtime hours for men, though this effect is smaller in magnitude than the penalty for women. The specificity of this effect to new male supervisors suggests that when male supervisors face performance pressure in early tenure, they implement cost-cutting in gendered ways, with women facing the largest penalty to baseline hours that they expect as full-time workers.</p>
+</details>
+</div>
+<p class="subhead" id="working-papers">Working Papers</p>
+<div class="paper">
+<h3>Organizational Inequality Regimes: How Hours, Tenure, and Sorting Produce Gender Gaps in US Warehouses</h3>
+<details>
+<summary>Abstract</summary>
+<p class="abstract">How do workplaces shape pay gaps between men and women? Classic theories emphasize that individual characteristics and market conditions determine gender differences in pay. In contrast, theories of the relational drivers of inequality and gendered organizations claim that gender pay gaps are a result of local and workplace-level processes, including managerial decision-making. Despite theoretical attention to local, relational processes, there is little evidence on whether and how workplaces and the actors within them shape gender pay inequality. In this paper, I investigate whether the gender pay gap and the mechanisms producing it vary across similar workplaces within the same firm. I use administrative pay data for nearly 9,000 full-time warehouse workers in 27 fulfillment centers within the same firm to decompose gender pay gaps at the workplace level. I find cross-establishment variation in the size of the gap and in the mechanisms producing it, with hours, tenure, and departmental sorting combining in different ways to advantage or disadvantage women. I interpret this heterogeneity through the lens of Joan Acker’s concept of inequality regimes, or local processes and practices that lead to variations in inequality. In this case, regimes are composed of different patterns of inequality-generating mechanisms. This workplace-level heterogeneity reveals that workplaces with large gender pay gaps tend to be characterized by an uneven distribution of hours, whereas workplaces with smaller or no gaps tend to have a more balanced distribution of hours.</p>
+</details>
+</div>
+<div class="paper">
+<h3>The Dynamics of Diversity, Equity, and Inclusion Practice Adoption</h3>
+<details>
+<summary>Abstract</summary>
+<p class="abstract">Despite the widespread adoption of Diversity, Equity, and Inclusion (DEI) initiatives in corporate America, significant disparities persist in the representation, compensation, and treatment of women and racial minorities. This paper investigates why well-intentioned DEI efforts often fail to achieve their intended outcomes and identifies managerial barriers hindering progress. This research employs a qualitative dynamic modeling approach to analyze the complexities of DEI practice implementation within organizations. I conducted a scoping review, focusing on longitudinal and experimental designs to identify key mechanisms influencing the outcomes of DEI practices. The interplay between organizational processes and individual cognitive and behavioral responses can be illustrated via reinforcing and balancing feedback loops that I map onto a causal loop diagram, which reveals how DEI initiatives interact with existing organizational processes and cultural dynamics. This paper introduces a dynamic perspective on DEI practice implementation, highlighting the feedback mechanisms that can either hinder or facilitate progress toward diversity goals. The model reveals that certain DEI practices may inadvertently trigger reinforcing loops that perpetuate inequality. By mapping DEI practices and their effects, this study provides a framework for understanding how DEI outcomes can diverge significantly depending on different implementation strategies. It underscores the importance of considering the endogenous feedback effects of DEI initiatives and offers insights into strategic interventions that can disrupt undesirable reinforcing cycles and promote progress toward organizational diversity, equity, and inclusion.</p>
+</details>
+</div>
+<div class="paper">
+<h3>Halting the Decline of U.S. Public Education Systems</h3>
+<p class="meta">With David Keith, Ellen O'Neill, and Saras Chung</p>
+</div>
+<p class="subhead" id="publications">Publications</p>
+<p class="pub">Keith, D., Yadama, A. P., O'Neill, E., &amp; Chung, S. (2024). Anticipating the Side Effects of Educational Reform Using System Dynamics Modeling. <span class="venue">Review of Research in Education</span>, 48(1), 1–27. <a href="https://doi.org/10.3102/0091732X241260012" target="_blank" rel="noopener">DOI</a></p>
+<details style="margin-top:-0.5rem;margin-bottom:1rem">
+<summary>Abstract</summary>
+<p class="abstract">Education reform policies have frequently underperformed due to the emergence of side-effects that undermined the intended consequences of the policy interventions. A key reason for this is that linear policy frameworks frequently overlook the multiple and nonlinear feedbacks that exist within complex educational systems. In this paper we introduce System Dynamics (SD) modeling as an analytical framework for anticipating policy side-effects (a.k.a. unintended consequences) ex-ante. We demonstrate the application of SD using the case of declining enrollment in St. Louis Public Schools. Using rich qualitative data from 96 interviews with parents and teachers, we demonstrate how the well-intentioned decisions of stakeholders have led to the system becoming stuck in a capability trap amplified by the well-intentioned decisions of teachers, parents and funders. Our paper highlights how system modeling can be used to anticipate the many consequences of policy interventions over time, positive and negative, guiding improved education policy-making.</p>
+</details>
+<p class="pub">Kelly, E., Rahmandad, H., Wilmers, N., &amp; Yadama, A. P. (2023). How Do Employer Practices Affect Economic Mobility? <span class="venue">ILR Review</span>, 76(5), 792–832. <a href="https://doi.org/10.1177/00197939231186607" target="_blank" rel="noopener">DOI</a></p>
+<details style="margin-top:-0.5rem;margin-bottom:1rem">
+<summary>Abstract</summary>
+<p class="abstract">How can employers facilitate economic mobility for workers, particularly workers of color or those without a college degree? The authors integrate a fragmented literature to assess how employers’ practices affect enhanced economic security and mobility. This article first identifies three pathways linking employers’ practices to mobility: improving material job quality, increasing access to better jobs for historically marginalized workers, and promoting sustainability of employment. The authors provide a critical assessment of the research literature on recruitment and hiring practices; pay and wages; promotion practices; scheduling; leaves; diversity, equity, and inclusion initiatives; and work systems as these practices relate to economic mobility. They then identify strategic questions and feasible designs for enhancing future research on these questions in order to guide policy and management practice.</p>
+</details>
+<p class="pub">Kelly, E., Rahmandad, H., Wilmers, N., &amp; Yadama, A. P. (2022). <a href="https://www.workrisenetwork.org/publications/employer-practices-and-worker-outcomes-landscape-report" target="_blank" rel="noopener">Employer Practices and Worker Outcomes: A Landscape Report</a>. <span class="venue">WorkRise / Urban Institute</span>.</p>
+<details>
+<summary>Additional publications (6)</summary>
+<div class="abstract">
+<p class="pub">Shadid, I. L. C., et al., incl. Yadama, A. P. (2023). Early life gut microbiome in children following spontaneous preterm birth and maternal preeclampsia. <span class="venue">iScience</span>, 26(12), 108311.</p>
+<p class="pub">Yadama, A. P., et al. (2020). Allergic Disease and Low ASQ Communication Score in Children. <span class="venue">Brain, Behavior, and Immunity</span>, 83, 293–297.</p>
+<p class="pub">Yadama, A. P., et al. (2020). Early-pregnancy transcriptome signatures of preeclampsia: From peripheral blood to placenta. <span class="venue">Scientific Reports</span>, 10(1), 17029.</p>
+<p class="pub">Yadama, A. P., Mirzakhani, H., McElrath, T. F., Litonjua, A. A., &amp; Weiss, S. T. (2020). Transcriptome analysis of early pregnancy vitamin D status and spontaneous preterm birth. <span class="venue">PLoS One</span>, 15(1), e0227193.</p>
+<p class="pub">Mirzakhani, H., Kelly, R. S., Yadama, A. P., et al. (2020). Stability of developmental status and risk of impairment at 24 and 36 months in late preterm infants. <span class="venue">Infant Behavior &amp; Development</span>, 60, 101462.</p>
+<p class="pub">Kelly, R. S., et al., incl. Yadama, A. P. (2019). Metabolomics and Communication Skills Development in Children. <span class="venue">Metabolites</span>, 9(3), 42.</p>
+</div>
+</details>
+</section>
+<section id="teaching">
+<h2>Teaching</h2>
+<p class="subhead" style="margin-top:0.25rem">Teaching Assistant, MIT Sloan School of Management</p>
+<ul class="plain">
+<li>15.311 Organizational Processes
+        <span class="li-note">Instructor: Erin Kelly · 2026</span>
+</li>
+<li>15.338 Leadership &amp; Teams Lab
+        <span class="li-note">Instructor: Nelson Repenning · 2026</span>
+</li>
+<li>15.S02 Global Strategy and Strategic Foresight
+        <span class="li-note">Instructors: Eppa Rixey &amp; Hiram Samel · 2026</span>
+</li>
+<li>15.S63 Discovering and Developing Your Leadership Signature (Executive MBA)
+        <span class="li-note">Instructor: Deborah Ancona · 2026</span>
+</li>
+<li>15.700 Leadership and Integrative Management (Executive MBA)
+        <span class="li-note">Instructors: Hiram Samel &amp; Nelson Repenning · 2024, 2025</span>
+</li>
+<li>15.871/3 System Dynamics for Business and Policy
+        <span class="li-note">Instructor: David Keith · 2023</span>
+</li>
+<li>15.736 System Dynamics (Executive MBA)
+        <span class="li-note">Instructor: John Sterman · 2021, 2022</span>
+</li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>The best way to reach me is by email at <a href="mailto:yadama@mit.edu">yadama@mit.edu</a>.</p>
+</section>
+<footer><p>Website adapted from <a href="https://github.com/gautamrao/gautamrao.github.io" rel="noopener" target="_blank">Gautam Rao's academic website template</a>, originally built by Xinyue Lin.</p></footer>
+</main>
+</body>
+</html>
